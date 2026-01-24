@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Days Since</title>
+  <link rel="stylesheet" href="sharks.css">
+  <link rel="icon" type="image/x-icon" href="shark.jpg">
+</head>
+
+<body>
+
+  <h1><strong>The Coolest Creature That Is A Shark</strong></h1>
+  <h4> Created by: Brandon Arroyo</h4>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Cool Facts</a></li>
+      <li><a href="songs.html">Songs</a></li>
+      <li><a href="safety.html">Web Safety</a></li>
+      <li><a href="since.html">Days Since</a></li>
+      <li><a href="credits.html">Credits</a></li>
+    </ul>
+  </nav>
+
+  <h3>Enter a date and we will compute how long it's been since then</h3>
+
+  <form id="submissionform">
+    <label for="monthInput">Month:</label>
+    <input type="number" id="monthInput" required maxlength="2" min="1" max="12">
+    <br>
+    <label for="dayInput">Day:</label>
+    <input type="number" id="dayInput" min="1" max="31" maxlength="2">
+    <br>
+    <label for="yearInput">Year:</label>
+    <input type="number" id="yearInput" maxlength="4" min="0" max="2023">
+    <br>
+    <input type="submit" id="submitbutton">
+  </form>
+  
+  <footer>
+    <a id="mail" href="mailto:barroyo61852@panther.chaffey.edu">barroyo6185@panther.chaffey.edu</a>
+    <div>This page was last modified on:
+      <script>
+        document.write(document.lastModified);
+      </script>
+    </div>
+  </footer>
+  <script src="modernizr.custom.05819.js"></script>
+  <script>
+    // main function
+    function processInput() {
+      var usermonth = document.getElementById("monthInput").value;
+      var userday = document.getElementById("dayInput").value;
+      var useryear = document.getElementById("yearInput").value;
+
+      var current = new Date();
+      var userDate = new Date(usermonth + "/" + userday + "/" + useryear);
+
+      var difference_in_time = Math.abs(current.getTime() - userDate.getTime());
+      var difference_in_days = Math.floor(difference_in_time / (1000 * 3600 * 24));
+
+      document.write("Date inputed: " + userDate);
+      document.write("<br>");
+      document.write("Current date: " + current);
+      document.write("<br>");
+      document.write("Difference in days: " + difference_in_days);
+      document.write("<br>");
+
+      // turns difference_in_days into years, months, days 
+      var finalYear = 0;
+      var finalMonth = 0;
+      var finalDay = 0;
+      while (difference_in_days > 365) {
+        difference_in_days -= 365;
+        finalYear += 1;
+      }
+      while (difference_in_days > 31) {
+        difference_in_days -= 31;
+        finalMonth += 1;
+      }
+      finalDay = difference_in_days;
+
+      document.write("Difference in time: " + finalYear + " years, " + finalMonth + " months, " + finalDay + " days");
+
+    };
+
+    function createEventListener() {
+      var submitButton = document.getElementById("submitbutton");
+      if (submitbutton.addEventListener) {
+        submitbutton.addEventListener("click", processInput, false);
+      } else if (submitbutton.attachEvent) {
+        submitbutton.attachEvent("onclick", processInput);
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("load", createEventListener, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", createEventListener)
+    }
+  </script>
+</body>
+</html>

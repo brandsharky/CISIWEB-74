@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Coolest Creature That Is A Shark</title>
+  <link rel="stylesheet" href="sharks.css">
+  <link rel="icon" type="image/x-icon" href="shark.jpg">
+</head>
+
+<body>
+
+  <header>
+    <h1><strong>The Coolest Creature That Is A Shark</strong></h1>
+  </header>
+  <h4> Created by: Brandon Arroyo</h4>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Cool Facts</a></li>
+      <li><a href="songs.html">Songs</a></li>
+      <li><a href="safety.html">Web Safety</a></li>
+      <li><a href="since.html">Days Since</a></li>
+      <li><a href="credits.html">Credits</a></li>
+    </ul>
+  </nav>
+
+  <h3 id="intro">Intro</h3>
+  <p> In the ocean, sharks are at the top of the food chain. They can eat almost anything, even things they really
+    shouldn't. Sharks have survived longer than the dinosaurs and will probably survive long after us humans. These
+    animals are amazing, and by studying them, humans have been able to find inspiration and ideas from these amazing
+    creatures. Scientists have used the shark's shape to create airplanes, jets, and even spaceships.</p>
+
+  <img class="shark"
+    src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/shark.png"
+    alt="shark">
+
+  <p id="reason">The <em>shark</em> is awesome because <strong>sharks are just overall amazing.</strong> "With fossil
+    records dating back 400 million years, sharks have outlived the dinosaurs and many other forms of life currently on
+    earth. There are more than 1,000 species of sharks and rays, with new species discovered every year." </p>
+
+  <h4 id="WARNING"> WARNING: SHARKS!!! STAY AWAY!!! </h4>
+  <img id="beach"
+    src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/beach-waves-at-sunset.png"
+    alt="sunset at the beach" width="500">
+
+  <form>
+    What is your favorite kind of shark? Enter the number of your favorite shark!
+    <br>
+    <ol>
+      <li>Hammerhead Shark</li>
+      <li>Tiger Shark</li>
+      <li>Great White Shark</li>
+      <li>Megalodon</li>
+    </ol>
+    <label for="favShark">Favorite Shark: </label>
+    <input type="number" id="favShark" required maxlength="1" max="4" min="1">
+    <br>
+    <input type="submit" id="submissionButton">
+  </form>
+
+  <footer>
+    <a id="mail" href="mailto:barroyo61852@panther.chaffey.edu">barroyo6185@panther.chaffey.edu</a>
+    <div>This page was last modified on:
+      <script>
+        document.write(document.lastModified);
+      </script>
+    </div>
+  </footer>
+  
+  <script src="modernizr.custom.05819.js"></script>
+  
+  <script>
+    var userInput = document.getElementById("favShark").value;
+    function checkForm() {
+      try {
+        if (userInput.value > 4 || userInput.value < 1) {
+          throw "Please enter your favorite shark.";
+        }
+      }
+      catch (sharkError) {
+        alert("Please enter a shark name option.");
+        return false;
+      }
+    };
+    document.getElementById("submissionButton").addEventListener("click", checkForm, false); 
+
+    /*I used 3 main debugging methods from chapter 4. The first debugging method I used was using the W3C html validator. It gave me a couple of syntax errors that I was able to fix. The second was exception handling. I attempted to used the try, thow, catch, and finally methods to catch and display an error. The final method I used were the debugging tools on VSCode. It displayed syntax errors, both HTML and Javascript, and helped me clean my code. Through these methods I was able to make my program more efficient.*/
+    var regex = /.{1}/;
+    function displayMessage() {
+      if (regex.test(userInput.value)) {
+        alert("Thank you!");
+      }
+    };
+    document.getElementById("submissionButton").addEventListener("click", displayMessage, false);
+  </script>
+</body>
+</html>

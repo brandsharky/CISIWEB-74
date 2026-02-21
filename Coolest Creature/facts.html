@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Facts Frenzy</title>
+  <link rel="stylesheet" href="sharks.css">
+  <link rel="icon" type="image/x-icon" href="shark.jpg">
+</head>
+
+<body>
+
+  <h1><strong>The Coolest Creature That Is A Shark</strong></h1>
+  <h4> Created by: Brandon Arroyo</h4>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Cool Facts</a></li>
+      <li><a href="songs.html">Songs</a></li>
+      <li><a href="safety.html">Web Safety</a></li>
+      <li><a href="since.html">Days Since</a></li>
+      <li><a href="credits.html">Credits</a></li>
+    </ul>
+  </nav>
+
+  <div id="button">
+    <button onClick="sharkTeethGuess()">Take a Guess</button>
+  </div>
+
+  <h3 id="Cool-Facts">Here are some cool facts about sharks!</h3>
+
+  <ol>
+    <li> Sharks don't have bones. Instead, their skeletons are made of cartilage. Cartilage is what your ears and tip of
+      your nose are made of, soft and bendy.</li>
+
+    <li> Most sharks have good eyesight. They have a thing in the back of their eyes that helps them see very well in
+      the dark.</li>
+
+    <li> Sharks skin feels like sandpaper, rough and hard. It is basically covered in lots of tiny teeth. </li>
+
+    <li> Sharks can go into a trance. When the are flipped over, they are unable to move, making them less dangerous and
+      more able to hold and handle. </li>
+
+    <li> <strong>The whale shark is like, a whale.</strong> </li>
+
+    <li> On the sides of their bodies, sharks have a line of holes called lateral line organs. The lateral line organs
+      are sensitive around small movements in the water. When a fish is swimming nearby, the lateral line organs will
+      pick up the movements and help the shark know where the fish is.</li>
+
+    <li> "Unlike humans who can only move their lower jaw around, sharks can freely move both their upper and lower
+      jaws, detaching when it attacks its prey, allowing it to better grip the unfortunate animal and chew it up."</li>
+  </ol>
+
+  <img class="shark"
+    src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/shark.png"
+    alt="shark">
+
+  <p id="great-white"> The Great White shark is the largest meat-eating fish on earth today, but there were once sharks
+    that may have been <em><strong>three times bigger</strong></em>! Scientists have named the ancient monster shark
+    <em> <strong>Carcharodon Megalodon</strong></em>. The Megalodon had teeth that were <em><strong>more than six inches
+        long</strong></em>!
+  </p>
+
+  <h2 id="Wonk"> That's So Wonk!</h2>
+
+  <p> This section is devoted to crazy things about sharks! </p>
+  <ol>
+
+    <li> Amazing things have been found in the stomachs of sharks. It seems that they would eat almost anything.
+      Somethings that have been found in the stomachs of sharks are a barrel of nails, a casket of wine, fur coats, a
+      suit of armor, a cannonball, a torpedo, a kimono(Japanese robe), a drum, a treasure chest, a tyre, and a license
+      plate.</li>
+
+    <li> Sharks have a sixth sense. "In addition to their killer sense of smell, sharks also can detect prey by tapping
+      in to the small electrical fields that other animals generate using tiny organs called the ampullae of Lorenzini."
+    </li>
+
+    <li> Hammerhead sharks have a hammer-shaped head for a reason. The head is packed with 3,000 ampullar pores to track
+      down it's favorite meals.</li>
+
+    <li> "A 2009 study found that the placement of their eyes gives them impressive binocular vision and the ability to
+      see 360 degrees."</li>
+
+    <li> "While sharks live in all of the world's oceans, a few species are also known to inhabit freshwater lakes and
+      rivers. For example, bull sharks are found in tropical rivers and have evolved to swim between salt and fresh
+      water."</li>
+
+    <li> "Great whites don't kill by crushing their prey in their jaws, they prefer a style of attack in which they
+      chomp on their victim and pull back, letting the prey bleed to death before proceeding to eat the rest of them."
+    </li>
+
+    <li> Sharks don't sleep. "At least, they don't sleep like humans. Since some species have to continue swimming in
+      order to breathe, instead of falling into a deep sleep, sharks remain semi-conscious."</li>
+
+    <li> "Sharks do not have vocal chords and do not use audible sounds to communicate anger or other emotions. Instead,
+      they express themselves physically."</li>
+  </ol>
+
+  <form>
+    <fieldset>
+      <legend>Question 1</legend>
+      <legend>What is this website about?</legend>
+      <input type="radio" id="turtle" required="required">
+      <label for="turtle">Turtles</label>
+      <input type="radio" id="sharkcheckbox" required="required">
+      <label for="shark">Sharks</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Question 2</legend>
+      <legend>Do sharks have vocal cords?</legend>
+      <input type="text" placeholder="Y or N" id="yorn" maxLength="1" required="required" novalidate="novalidate">
+    </fieldset>
+
+    <fieldset>
+      <legend>Question 3</legend>
+      <legend>How many degrees can a hammerhead shark see?</legend>
+      <input type="number" id="degrees" required="required" min="1" max="360" maxlength="3" novalidate="novalidate">
+      <label for="degrees">degrees of vision</label>
+    </fieldset>
+
+    <input type="submit" id="submitButton" value="Submit">
+  </form>
+  <script>
+    var yorn = document.getElementById("yorn");
+    if (yorn.valueMissing) {
+      setCustomValidity("Please fill out this field");
+    }
+    if (Number(yorn) || yorn == "" || yorn == null) {
+      setCustomValidity("Please put Y or N");
+    }
+
+    var degrees = document.getElementById("degrees");
+    if (degrees.valueMissing) {
+      setCustomValidity("Please fill out this field");
+    }
+    if (isNaN(degrees)) {
+      setCustomValidity("Please enter a number")
+    }
+
+
+    if (yorn.value === "" || degrees.value === "") {
+      formValidity = false;
+    }
+  </script>
+
+  <footer>
+    <a id="mail" href="mailto:barroyo61852@panther.chaffey.edu">barroyo6185@panther.chaffey.edu</a>
+    <div>This page was last modified on:
+      <script>
+        document.write(document.lastModified);
+      </script>
+    </div>
+  </footer>
+
+  <script src="modernizr.custom.05819.js"></script>
+  <script>
+    var averageSharkTeeth = 350;
+
+    function sharkTeethGuess() {
+      var guess = window.prompt("What is the average amount of teeth in a shark's mouth at one time? "); //350
+
+      var difference = averageSharkTeeth - guess;
+      if (difference < 0) {
+        difference = Math.abs(difference);
+      }
+
+      if (difference === 0) {
+        alert("What a great guess! You were right! The shark has an average of " + averageSharkTeeth + " teeth in its mouth at one time.");
+      } else {
+        alert("You were off by " + difference + " teeth. The shark has an average of " + averageSharkTeeth + " teeth in its mouth at one time.");
+      }
+    };
+  </script>
+  <script>
+    var question1status;
+    var question2status;
+    var question3status;
+
+    function checkForm() {
+      var turtlesbox = document.getElementById("turtle");
+      var sharkbox = document.getElementById("sharkcheckbox");
+
+      var useryorninput = document.getElementById("yorn").value;
+      useryorninput.toUpperCase();
+      var yorncheck = /[YN]/;
+      var yorncheckcorrect = /[Y]/;
+      var yorncheckincorrect = /[N]/;
+
+      var userdegreeinput = document.getElementById("degrees").value;
+
+
+      if (turtlesbox.checked) {
+        question1status = "Incorrect";
+      } else if (sharkbox.checked) {
+        question1status = "Correct";
+      }
+
+      if (yorncheck.test(useryorninput)) {
+        if (/[Y]/.test(useryorninput)) {
+          question2status = "Incorrect";
+        } else if (/[N]/) {
+          question2status = "Correct";
+        }
+      } else {
+        alert("Please enter Y or N for Question 2")
+      }
+
+      if (userdegreeinput == "360") {
+        question3status = "Correct";
+      } else {
+        question3status = "Incorrect";
+      }
+
+      document.write("Question 1: " + question1status + "<br>");
+      document.write("Question 2: " + question2status + "<br>");
+      document.write("Question 3: " + question3status + "<br>");
+    };
+
+    var submitbtn = document.getElementById("submitButton");
+    submitbtn.addEventListener("click", checkForm, false);
+  </script>
+</body>
+
+</html>

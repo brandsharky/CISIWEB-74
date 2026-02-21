@@ -1,0 +1,169 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Order Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Build Your Pizza</h1>
+    <form>
+        <fieldset>
+        <p>Choose your pizza size</p>
+        <input type="checkbox" id="inch12" name="pizza" value="18">
+        <label for="inch12">12" ($18.00)</label>
+
+        <input type="checkbox" id="inch16" name="pizza" value="24">
+        <label for="inch16">16" ($24.00)</label>
+
+        <input type="checkbox" id="inch20" name="pizza" value="30">
+        <label for="inch20">20" ($30.00)</label>
+        </fieldset>
+        
+        <fieldset>
+        <p>Choose your type of crust</p>
+        <input type="radio" id="normal_crust" name="pizza" value="0" defaultChecked="defaultChecked">
+        <label for="normal_crust">Normal</label>
+
+        <input type="radio" id="thick_crust" name="pizza" value="5">
+        <label for="thick_crust">Deep Dish ($5.00)</label>
+
+        <input type="radio" id="thin_crust" name="pizza" value="6">
+        <label for="thin_crust">Thin ($6.00)</label>
+        </fieldset>
+        
+        <fieldset>
+        <p>Choose your toppings(Comes with cheese; $2.00 each)</p>
+        <input type="checkbox" id="pepperoni" name="pizza" value="2">
+        <label for="pepperoni">pepperoni</label>
+        <br>
+        <input type="checkbox" id="sausage" name="pizza" value="2">
+        <label for="sausage">sausage</label>
+        <br>
+        <input type="checkbox" id="anchovies" name="pizza" value="2">
+        <label for="anchovies">anchovies</label>
+        <br>
+        <input type="checkbox" id="artichokes" name="pizza" value="2">
+        <label for="artichokes">artichokes</label>
+        <br>
+        <input type="checkbox" id="bacon" name="pizza" value="2">
+        <label for="bacon">bacon</label>
+        <br>
+        <input type="checkbox" id="peppers" name="pizza" value="2">
+        <label for="peppers">bell peppers</label>
+        <br>
+        <input type="checkbox" id="chicken" name="pizza" value="2">
+        <label for="chicken">chicken</label>
+        <br>
+        <input type="checkbox" id="ham" name="pizza" value="2">
+        <label for="ham">ham</label>
+        <br>
+        <input type="checkbox" id="olives" name="pizza" value="2">
+        <label for="olives">olives</label>
+        <br>
+        <input type="checkbox" id="jalapenos" name="pizza" value="2">
+        <label for="jalapenos">jalapenos</label>
+        <br>
+        <input type="checkbox" id="mushrooms" name="pizza" value="2">
+        <label for="mushrooms">mushrooms</label>
+        <br>
+        <input type="checkbox" id="onions" name="pizza" value="2">
+        <label for="onions">onions</label>
+        <br>
+        <input type="checkbox" id="pineapple" name="pizza" value="2">
+        <label for="pineapple">pineapple</label>
+        </fieldset>
+        
+        <fieldset>
+        <p>Choose Payment Method</p>
+        <select>
+            <option>Cash</option>
+            <option>Credit Card</option>
+        </select>
+    
+    <footer>
+        <a id="mail" href="mailto:barroyo61852@panther.chaffey.edu">barroyo6185@panther.chaffey.edu</a>
+        <br>
+        CISIWEB-74 &nbsp; 2023
+      </footer>
+
+      <script src="modernizr.custom.05819.js"></script>
+      <script>
+        function calcTotal() {
+            var itemTotal = 0;
+                
+            var size1 = document.getElementById("inch12");
+            var size2 = document.getElementById("inch16");
+            var size3 = document.getElementById("inch20");
+
+            var crust1 = document.getElementById("normal_crust");
+            var crust2 = document.getElementById("thick_crust");
+            var crust3 = document.getElementById("thin_crust");
+
+            var topping1 = document.getElementById("pepperoni");
+            var topping2 = document.getElementById("sausage");
+            var topping3 = document.getElementById("anchovies");
+            var topping4 = document.getElementById("artichokes");
+            var topping5 = document.getElementById("bacon");
+            var topping6 = document.getElementById("peppers");
+            var topping7 = document.getElementById("chicken");
+            var topping8 = document.getElementById("ham");
+            var topping9 = document.getElementById("olives");
+            var topping10 = document.getElementById("jalapenos");
+            var topping11 = document.getElementById("mushrooms");
+            var topping12 = document.getElementById("onions");
+            var topping13 = document.getElementById("pineapple");
+
+
+            (size1.checked) ? (itemTotal += 18) : (itemTotal +=0);
+            (size2.checked) ? (itemTotal += 24) : (itemTotal +=0);
+            (size3.checked) ? (itemTotal += 30) : (itemTotal +=0);
+
+            (crust1.checked) ? (itemTotal += 0) : (itemTotal +=0);
+            (crust2.checked) ? (itemTotal += 5) : (itemTotal +=0);
+            (crust3.checked) ? (itemTotal += 6) : (itemTotal +=0);
+
+            (topping1.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping2.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping3.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping4.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping5.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping6.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping7.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping8.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping9.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping10.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping11.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping12.checked) ? (itemTotal += 2) : (itemTotal +=0);
+            (topping13.checked) ? (itemTotal += 2) : (itemTotal +=0);
+
+            var salesTaxRate = 0.07;
+            itemTotal *= 100;
+            var orderTotal = (itemTotal + (itemTotal * salesTaxRate)) / 100;
+            alert("Your order total is $" + orderTotal);
+        
+        };
+        document.getElementById("submit").addEventListener("click", calcTotal(), false);
+
+      </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

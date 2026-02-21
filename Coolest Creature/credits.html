@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Credits</title>
+  <link rel="stylesheet" href="sharks.css">
+  <link rel="icon" type="image/x-icon" href="shark.jpg">
+</head>
+
+<body>
+
+  <h1><strong>The Coolest Creature That Is A Shark</strong></h1>
+  <h4> Created by: Brandon Arroyo</h4>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Cool Facts</a></li>
+      <li><a href="songs.html">Songs</a></li>
+      <li><a href="safety.html">Web Safety</a></li>
+      <li><a href="since.html">Days Since</a></li>
+      <li><a href="credits.html">Credits</a></li>
+    </ul>
+  </nav>
+
+  <p>My name is Brandon Arroyo. I am the creator of this website. I love to play soccer and watch TV. To me, programming
+    is a digital way to be creative. That is the main reason why I created this website. Ever since I was little, I have
+    loved playing with Legos. The thing with Legos is that you can let your imagination go wild and do whatever you want
+    to create. But over time, I outgrew Legos and I still am. But luckily, I discovered programming. To me, programming
+    is a digital version of Legos, where you can be as creative as you want from websites to game design. I love being
+    creative, so programming is just another way to do that. I want to learn as much as I can about programming, so I
+    can have the tools and knowledge to create all kinds of programs that my imagination can build. A job I am
+    interested in related to computer programming is being a programmer for a big and popular tech company like Google
+    or Facebook.</p>
+
+  <h2 id="sources-cited">Sources Cited</h2>
+  <ul id="sources">
+    <li> <a href="https://www.fisheries.noaa.gov/feature-story/12-shark-facts-may-surprise-you"
+        target="_blank">https://www.fisheries.noaa.gov/feature-story/12-shark-facts-may-surprise-you</a>
+    </li>
+    <li> <a href="https://bestlifeonline.com/sharks-facts/" target="_blank">https://bestlifeonline.com/sharks-facts/</a>
+    </li>
+    <li> Zoobooks: Sharks by John Bonnett Wexo</li>
+    <li> Who Would Win? Hammerhead vs. Bull Shark by Jerry Pallotta</li>
+    <li>Shark Fighter by The Aquabats!</li>
+    <li>Sharks by Imagine Dragons</li>
+    <li>Javascript: The Web Warrior's Series, 6e by Sasha Vodnik and Don Gosselin</li>
+  </ul>
+
+  <form>
+    How would you rate this website?
+    <select id="ratingoptions">
+      <option value="none" selected disabled hidden>----Select Option----</option>
+      <option id="option1" value="option1">Amazing!</option>
+      <option id="option2" value="option2">Great!</option>
+      <option id="option3" value="option3">Decent</option>
+      <option id="option4" value="option4">Needs Work</option>
+      <option id="option5" value="option5">Horrible</option>
+    </select>
+    <input type="submit" id="submitButton">
+  </form>
+
+  <footer>
+    <a id="mail" href="mailto:barroyo61852@panther.chaffey.edu">barroyo6185@panther.chaffey.edu</a>
+    <div>This page was last modified on:
+      <script>
+        document.write(document.lastModified);
+      </script>
+    </div>
+  </footer>
+
+  <script src="modernizr.custom.05819.js"></script>
+  <script>
+
+    function mainfunction() {
+
+      var optionsArray = [];
+
+      var option1 = document.getElementById("option1");
+      var option2 = document.getElementById("option2");
+      var option3 = document.getElementById("option3");
+      var option4 = document.getElementById("option4");
+      var option5 = document.getElementById("option5");
+
+
+      if (option1.selected) {
+        optionsArray.push(option1.innerHTML);
+      }
+      if (option2.selected) {
+        optionsArray.push(option2.innerHTML);
+      }
+      if (option3.selected) {
+        optionsArray.push(option3.innerHTML);
+      }
+      if (option4.selected) {
+        optionsArray.push(option4.innerHTML);
+      }
+      if (option5.selected) {
+        optionsArray.push(option5.innerHTML);
+      }
+
+      var string = optionsArray.toString();
+      document.write("You selected: '" + string + "' <br>Thanks for the feedback.");
+    };
+
+    function createEventListener() {
+      var submitButton = document.getElementById("submitButton");
+      if (submitButton.addEventListener) {
+        submitButton.addEventListener("click", mainfunction, false);
+      } else if (submitButton.attachEvent) {
+        submitButton.attachEvent("onclick", mainfunction);
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("load", createEventListener, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", createEventListener)
+    }
+  </script>
+</body>
+
+</html>
